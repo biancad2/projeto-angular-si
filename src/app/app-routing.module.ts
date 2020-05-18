@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'bitcoin', component: BitcoinComponent },
   
   { path: 'biancaprojetos', component: ProjetosBiancaComponent },
-  { path: 'projetos/:name', component: DetalhesProjetosBiancaComponent }
+  { path: 'projetosbianca/:name', component: DetalhesProjetosBiancaComponent }
 ];
 
 @NgModule({
