@@ -1,0 +1,21 @@
+
+<h1>Projeto - {{this.projeto.name}}</h1>
+<p class="text-muted">{{this.projeto.full_name}}</p>
+<p class="text-muted">ID: {{this.projeto.id}}</p>
+<h2>Descrição</h2>
+<p *ngIf="this.projeto.description; else elseBlock">{{this.projeto.description}}</p>
+<ng-template #elseBlock><p class="description">Não há descrição.</p></ng-template>
+<h2>Feito por:</h2>
+<p>{{this.projeto.owner.login}}</p>
+<h2>Criado: </h2>
+<p class="card-text">{{this.projeto.created_at | date:"full" }}</p>
+<h2>Atualizado:</h2>
+<p class="card-text"> {{this.projeto.updated_at | date:"full" }}</p>
+<div>
+    <a href="{{this.projeto.html_url}}" class="card-link" target="_blank">
+        Veja no GitHub <i class="material-icons">open_in_new</i>
+    </a>
+</div>
+<a [routerLink]="['/biancaprojetos']" class="btn btn-outline-primary "> <i class="material-icons align-middle">navigate_before</i>Voltar</a>
+
+
